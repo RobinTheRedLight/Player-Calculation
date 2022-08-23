@@ -34,3 +34,16 @@ document.getElementById('but-6').addEventListener('click', function () {
     playerAdd('ply-6');
     document.getElementById('but-6').disabled = true;
 })
+
+document.getElementById('btn-cal').addEventListener('click', function () {
+    const inpTxt = document.getElementById('inp-play-cal');
+    const inpTxtVal = inpTxt.value;
+    const inpNumVal = parseFloat(inpTxtVal);
+    const cal = inpNumVal * 5;
+    if (isNaN(cal)) {
+        alert('Please Enter Budget in Number');
+    }
+    else {
+        document.getElementById('play-cal').innerText = cal;
+    }
+})
