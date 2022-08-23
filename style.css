@@ -1,3 +1,7 @@
 .carousel-inner {
     max-height: 450px;
 }
+
+#inp-fld-ply {
+    list-style-type: decimal;
+}
