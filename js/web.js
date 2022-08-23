@@ -47,3 +47,25 @@ document.getElementById('btn-cal').addEventListener('click', function () {
         document.getElementById('play-cal').innerText = cal;
     }
 })
+document.getElementById('total-cal').addEventListener('click', function () {
+    const inpTxtMan = document.getElementById('inp-man');
+    const inpTxtValMan = inpTxtMan.value;
+    const inpNumValMan = parseFloat(inpTxtValMan);
+
+    const inpTxtCo = document.getElementById('inp-coach');
+    const inpTxtValCo = inpTxtCo.value;
+    const inpNumValCo = parseFloat(inpTxtValCo);
+
+    const playVal = document.getElementById('play-cal');
+    const playValTxt = playVal.innerText;
+    const playValNum = parseInt(playValTxt);
+
+    const sum = inpNumValMan + inpNumValCo + playValNum;
+
+    if (isNaN(sum)) {
+        alert('Please Enter Number');
+    }
+    else {
+        document.getElementById('tot-val').innerText = sum;
+    }
+})
